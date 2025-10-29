@@ -1,0 +1,15 @@
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configuración local
+venv/
+# Archivos de pytest
+.pytest_cache/
+.cache/
+
+# Archivos de logs o salidas temporales
+*.log
+*.tmp
