@@ -37,13 +37,21 @@ La organización del proyecto sigue una estructura modular para facilitar la ges
 pre-entrega-automation-testing-brian-buera/
 ├── report/
 │     └── reporte.html      # Informe de resultados generado por pytest-html
-├── tests/
+├── pages/                  # Contiene las clases de pada pagina con sus  selectores
 │     └── __init__.py
-│     └── test_pagina.py    # Contiene los casos de prueba automatizados
+│     └── cart_page.py    
+│     └── inventory_page.py
+│     └── login_page.py 
+├── tests/                  # Contiene los casos de prueba automatizado
+│     └── __init__.py
+│     └── test_pagina.py    
+│     └── test_catalogo.py
+│     └── test_carrito.py    
 ├── utils/
 │     └── __init__.py
 │     └── funciones.py      # Funciones de ayuda
-├── requirements.txt        # Lista de dependencias del proyecto
+├── requirements.txt
+├── conftest.py             # se encuentra el parametro driver       
 └── README.md
 ```
 
@@ -91,16 +99,16 @@ Ejecuta prueba de login:
 pytest -v -m login
 ```
 
-Ejecuta prueba de navegacion:
+Ejecuta prueba de catalogo:
 
 ```bash
-pytest -v -m navegacion
+pytest -v -m catalogo
 ```
 
-Ejecuta prueba de compra:
+Ejecuta prueba de carrito:
 
 ```bash
-pytest -v -m compra
+pytest -v -m carrito
 ```
 
 ### 2\. Ejecutar y generar informe HTML
